@@ -92,42 +92,6 @@
       };
       document.body.appendChild(script);
 	  
-	  		setWindowSize();
-
-	window.addEventListener("resize", setWindowSize);	
-	  function setWindowSize() {
-		
-		var Width = innerWidth;
-		var ConstHeight = innerHeight;
-		
-        var newHeightFloat;
-        var newWidthFloat;
-		
-		newHeightFloat = Width / 1.7;
-        Height = newHeightFloat;
-		
-		try {
-			
-		if (Height >  ConstHeight) {
-			
-                Height = ConstHeight;
-                newWidthFloat = Height * 1.7;
-                Width = newWidthFloat;
-
-                document.getElementById("unity-canvas").style.width = Width + "px";
-	            document.getElementById("unity-canvas").style.height = Height + "px";
-		}
-		else
-            {
-                document.getElementById("unity-canvas").style.width = Width + "px";
-	            document.getElementById("unity-canvas").style.height = Height + "px";
-            }
-		}
-		catch (error) {
-			  console.error(error);
-		}
-	}
-
       vkBridge.send('VKWebAppInit');
 	  
       function auth(){
